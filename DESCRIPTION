@@ -1,0 +1,19 @@
+Package: gmeta
+Title: Generates metadata
+Version: 0.1
+Authors@R: 
+    person("Anish", "Chakka", , "anish.chakka@alleninstitute.org", role = c("aut", "cre"))
+Description: The package has helper function to generate metadata for a project. It will help
+          in tracking which studies have been analyzed and their corresponding metadata.It has 
+          helper functions to generate metadata for:
+          1. Overall project and their studies
+          2. ArchR
+          3. suerat
+License: CC0
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.2
+Suggests: 
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
