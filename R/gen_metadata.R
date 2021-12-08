@@ -20,7 +20,9 @@ gen_meta_obj <- function(archr_meta, sample_meta) {
                         threshold = "vector",
                         batch = "vector",
                         study = "character",
-                        load = "vector"))
+                        load = "vector",
+                        cells.prefilter = "character",
+                        cells.postfilter = "character"))
 
   setMethod("show",
             "archr",
@@ -33,6 +35,8 @@ gen_meta_obj <- function(archr_meta, sample_meta) {
               cat("batch:", object@batch, "\n")
               cat("study:", object@study, "\n")
               cat("load:", object@load, "\n")
+              cat("cells.prefilter:", object@cells.prefilter, "\n")
+              cat("cells.postfilter:", object@cells.postfilter, "\n")
             })
 
   archr.obj <- new("archr",
@@ -44,7 +48,9 @@ gen_meta_obj <- function(archr_meta, sample_meta) {
                       threshold = archr_meta$Threshold,
                       batch = archr_meta$Batch,
                       study = archr_meta$Study,
-                      load = archr_meta$Load)
+                      load = archr_meta$Load,
+                      cells.prefilter = archr_meta$Cell_PreFilter,
+                      cells.postfilter = archr_meta$Cell_PostFilter)
 
   meta.obj <- list(sample.metadata = sample_meta, archR = archr.obj)
 
@@ -62,8 +68,10 @@ gen_sample_sheets <- function() {
   colnames(sample.meta) <-c("Studies", "Batch_vendor_name", "Load_name", "Donor_name", "Age", "Sex", "ROI")
   write.table(sample.meta, file = "sample_metadata.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 
-  archr_meta <- data.frame(matrix(vector(),ncol=9))
-  colnames(archr_meta) <-c("Point_person", "Date", "Notes", "Taxonomy", "Metric", "Threshold", "Batch", "Study", "Load")
+  archr_meta <- data.frame(matrix(vector(),ncol=11))
+  colnames(archr_meta) <-c("Point_person", "Date", "Notes", "Taxonomy",
+                           "Metric", "Threshold", "Batch", "Study", "Load",
+                           "Cell_PreFilter", "Cell_PostFilter")
   write.table(archr_meta, file = "archr_metadata.txt", quote = FALSE, sep = "\t", row.names = FALSE)
 
 }
