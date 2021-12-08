@@ -13,7 +13,7 @@
 gen_meta_obj <- function(archr_meta, sample_meta) {
   setClass("archr",
            slots = list(point.person = "character",
-                        date = "POSIXct",
+                        date = "character",
                         notes = "character",
                         taxonomy = "character",
                         metric = "vector",
@@ -37,7 +37,7 @@ gen_meta_obj <- function(archr_meta, sample_meta) {
 
   archr.obj <- new("archr",
                       point.person = archr_meta$Point_person,
-                      date = archr_meta$Date,
+                      date = archr$Date,
                       notes = archr_meta$Notes,
                       taxonomy = archr_meta$Taxonomy,
                       metric = archr_meta$Metric,
