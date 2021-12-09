@@ -1,0 +1,13 @@
+Studies	Batch_vendor_name	Load_name	Donor_name	Age	Sex	ROI
+BG_thalamocortical_circutry	MTX-2019	774_A06	Q21.26.003	5 yrs	M	Macaque CaH
+BG_thalamocortical_circutry	MTX-2019	774_B06	Q21.26.003	5 yrs	M	Macaque CaB
+NHP_BG_Circuit	MTX-2022	795.1_A06	Q21.26.010	7 yrs	M	Macaque CaH
+NHP_BG_Circuit	MTX-2022	795.1_B06	Q21.26.010	7 yrs	M	Macaque CaB
+NHP_BG_Circuit	MTX-2022	795.1_C06	Q19.26.010	10 yrs	F	Macaque CaB
+NHP_BG_Circuit	MTX-2024	810_A02	Q19.26.010	10 yrs	FALSE	Macaque PuR
+NHP_BG_Circuit	MTX-2025	810_D02	Q19.26.010	10 yrs	FALSE	Macaque CaH
+NHP_BG_Circuit	MTX-2025	810_E02	Q21.26.002	11 yrs	FALSE	Macaque CaH
+NHP_BG_Circuit	MTX-2025	810_F02	Q21.26.002	11 yrs	FALSE	Macaque CaB
+NHP_BG_Circuit	MTX-2027	810_B02	Q21.26.010	7 yrs	M	Macaque PuR
+NHP_BG_Circuit	MTX-2027	810_C02	Q21.26.003	5 yrs	M	Macaque PuR
+
